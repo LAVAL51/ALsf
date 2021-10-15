@@ -1,0 +1,27 @@
+
+#principal{
+    width: 1000px;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    min-height : 500px;
+}
+
+.titre{
+    font-weight:bold;
+    font-size:25px;
+    display:inline-block;
+    text-align:middle;
+    vertical-align: middle;
+    left:35%;
+    position:relative;
+}
+
+.image{
+    width:15%;
+    position:relative;
+    vertical-align:middle;
+    left:32%;
+    display:inline-block;
+    margin:10px;
+}

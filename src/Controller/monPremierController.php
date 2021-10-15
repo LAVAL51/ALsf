@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class monPremierController
+class monPremierController extends AbstractController
 {
     #[Route(
         '/',
@@ -13,7 +14,9 @@ class monPremierController
     )]
     public function index()
     {
-        return new Response("Bonjour j'utilise PHP strom avec sf");
+        return $this->render('index/index.html.twig', [
+
+    ]);
     }
 
     #[Route(
@@ -22,9 +25,15 @@ class monPremierController
     )]
     public function contact($slug)
     {
-        return new Response(sprintf(
-            'Comming Soon "%s"',
-            ucWords(str_replace('-', ' ', $slug))
-        ));
+        $mescontact = [
+            'Anthony LAVAL',
+            'Boby LEBARBARE',
+            'Jean-Michel',
+        ];
+
+        return $this->render('contact/show.html.twig', [
+            'contact' =>  ucWords(str_replace('-', ' ', $slug)),
+            'mescontact'=> $mescontact,
+    ]);
     }
 }

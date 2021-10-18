@@ -7,21 +7,17 @@
     min-height : 500px;
 }
 
-.titre{
-    font-weight:bold;
-    font-size:25px;
-    display:inline-block;
-    text-align:middle;
-    vertical-align: middle;
-    left:35%;
-    position:relative;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.image{
-    width:15%;
-    position:relative;
-    vertical-align:middle;
-    left:32%;
-    display:inline-block;
-    margin:10px;
+header .image{
+    width: 20%;
+    margin-bottom: 1em;
+}
+
+.custom{
+    margin-right: 1em;
 }

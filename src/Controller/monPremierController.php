@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,8 +15,9 @@ class monPremierController extends AbstractController
     )]
     public function index()
     {
+        $personne = 'nom';
         return $this->render('index/index.html.twig', [
-
+            'personne' => $personne,
     ]);
     }
 
@@ -35,5 +37,26 @@ class monPremierController extends AbstractController
             'contact' =>  ucWords(str_replace('-', ' ', $slug)),
             'mescontact'=> $mescontact,
     ]);
+    }
+
+    #[Route(
+        '/identification',
+        name: 'connexion'
+    )]
+    public function connexion(){
+        return $this->render('identification/connexion.html.twig', [
+
+        ]);
+    }
+
+    #[Route(
+        '/identification',
+        name: 'newacount'
+    )]
+    public function newacount(){
+
+        return $this->render('identification/newacount.html.twig', [
+
+        ]);
     }
 }
